@@ -1,0 +1,31 @@
+{
+  "direct": {
+    "models": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "requests": 2,
+    "turn_durations_seconds": [
+      194.319,
+      88.498
+    ],
+    "total_turn_seconds": 282.817
+  },
+  "with_spec": {
+    "models": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "requests": 3,
+    "turn_durations_seconds": [
+      264.665,
+      308.206
+    ],
+    "total_turn_seconds": 572.871
+  },
+  "note": "Обезличенная выписка измерений; внутренние идентификаторы чатов и локальные пути не публикуются."
+}

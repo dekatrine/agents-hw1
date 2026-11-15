@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tracker-v1.html",
+    "bytes": 23884,
+    "sha256": "9aeb52ad7be91f5cfb4b1c89c0313a95825287453eed445632ab23c626490790",
+    "inline_scripts": 1,
+    "syntax_ok": true,
+    "external_resources": [],
+    "css_external": false,
+    "network_calls": false
+  },
+  {
+    "file": "tracker-v1-fixed.html",
+    "bytes": 25233,
+    "sha256": "af006f6542ff21acab98c00d749892850e0c2a357ecea4453ee3e1fe879ce395",
+    "inline_scripts": 1,
+    "syntax_ok": true,
+    "external_resources": [],
+    "css_external": false,
+    "network_calls": false
+  },
+  {
+    "file": "tracker-v2.html",
+    "bytes": 12956,
+    "sha256": "e550733b9fffd017c1360d766a77aa7bb6dc1098b6521a1523b27ae06e00c63d",
+    "inline_scripts": 1,
+    "syntax_ok": true,
+    "external_resources": [],
+    "css_external": false,
+    "network_calls": false
+  }
+]

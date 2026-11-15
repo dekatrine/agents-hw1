@@ -1,0 +1,1693 @@
+{
+  "browser": "Google Chrome",
+  "date": "2026-11-15",
+  "v1": [
+    {
+      "check": "T1",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T2",
+      "fact": {
+        "done": "6",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "67%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": true,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T3",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-title",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "",
+          ""
+        ],
+        "hours": "1",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "spaces-title",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Введите название задачи, а не только пробелы.",
+          "",
+          ""
+        ],
+        "hours": "1",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "   ",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "negative-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "",
+          "Значение должно быть больше или равно 0,01.",
+          ""
+        ],
+        "hours": "-1",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "zero-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "",
+          "Значение должно быть больше или равно 0,01.",
+          ""
+        ],
+        "hours": "0",
+        "progress": "33%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "above-max",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "24,5 ч",
+            "title": "Проверка"
+          }
+        ],
+        "title": "",
+        "total": "32,5",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "bad-step",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "0,7 ч",
+            "title": "Проверка"
+          }
+        ],
+        "title": "",
+        "total": "8,7",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "0.5",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "0,5 ч",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "8,5",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "24",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "24 ч",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "32",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "UI-390",
+      "fact": {
+        "done": "2",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "33%",
+        "scrollWidth": 390,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 390
+      }
+    },
+    {
+      "check": "T5",
+      "fact": {
+        "done": "0",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [],
+        "title": "",
+        "total": "0",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T5-recovery",
+      "fact": {
+        "done": "0",
+        "errors": [
+          "Заполните это поле.",
+          "Заполните это поле.",
+          ""
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "1 ч",
+            "title": "После удаления"
+          }
+        ],
+        "title": "",
+        "total": "1",
+        "viewport": 1200
+      }
+    }
+  ],
+  "v2": [
+    {
+      "check": "T1",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T2",
+      "fact": {
+        "done": "6 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "75%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": true,
+            "hours": "4 ч · Готово",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T3",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "ready-filter",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-title",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "Введите название задачи.",
+            "visible": true
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "spaces-title",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "Введите название задачи.",
+            "visible": true
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "   ",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-hours",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите количество часов.",
+            "visible": true
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "negative-hours",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "-1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "zero-hours",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "0",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "above-max",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "24.5",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "bad-step",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Используйте шаг 0,5 часа.",
+            "visible": true
+          }
+        ],
+        "hours": "0.7",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "0.5",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "24%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "0,5 ч · Активная",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "8,5 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "24",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "6%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "24 ч · Активная",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "32 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "UI-390",
+      "fact": {
+        "done": "2 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 390,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч · Готово",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч · Активная",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч · Активная",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8 ч",
+        "viewport": 390
+      }
+    },
+    {
+      "check": "T5",
+      "fact": {
+        "done": "0 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [],
+        "title": "",
+        "total": "0 ч",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T5-recovery",
+      "fact": {
+        "done": "0 ч",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "1 ч · Активная",
+            "title": "После удаления"
+          }
+        ],
+        "title": "",
+        "total": "1 ч",
+        "viewport": 1200
+      }
+    }
+  ],
+  "v1_fixed": [
+    {
+      "check": "T1",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T2",
+      "fact": {
+        "done": "6",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "75%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": true,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T3",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-title",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "Введите название задачи, а не только пробелы.",
+            "visible": true
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "spaces-title",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "Введите название задачи, а не только пробелы.",
+            "visible": true
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "   ",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "empty-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите оценку в часах.",
+            "visible": true
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "negative-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите время от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "-1",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "zero-hours",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите время от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "0",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "above-max",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите время от 0,5 до 24 часов.",
+            "visible": true
+          }
+        ],
+        "hours": "24.5",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4",
+      "case": "bad-step",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "Укажите время с шагом 0,5 часа: 0,5; 1; 1,5…",
+            "visible": true
+          }
+        ],
+        "hours": "0.7",
+        "progress": "25%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "Проверка",
+        "total": "8",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "0.5",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "24%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "0,5 ч",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "8,5",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T4+",
+      "case": "24",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "6%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          },
+          {
+            "done": false,
+            "hours": "24 ч",
+            "title": "Граница"
+          }
+        ],
+        "title": "",
+        "total": "32",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "UI-390",
+      "fact": {
+        "done": "2",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "25%",
+        "scrollWidth": 390,
+        "tasks": [
+          {
+            "done": true,
+            "hours": "2 ч",
+            "title": "Чтение"
+          },
+          {
+            "done": false,
+            "hours": "4 ч",
+            "title": "Практика"
+          },
+          {
+            "done": false,
+            "hours": "2 ч",
+            "title": "Повторение"
+          }
+        ],
+        "title": "",
+        "total": "8",
+        "viewport": 390
+      }
+    },
+    {
+      "check": "T5",
+      "fact": {
+        "done": "0",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [],
+        "title": "",
+        "total": "0",
+        "viewport": 1200
+      }
+    },
+    {
+      "check": "T5-recovery",
+      "fact": {
+        "done": "0",
+        "errors": [
+          {
+            "text": "",
+            "visible": false
+          },
+          {
+            "text": "",
+            "visible": false
+          }
+        ],
+        "hours": "",
+        "progress": "0%",
+        "scrollWidth": 1200,
+        "tasks": [
+          {
+            "done": false,
+            "hours": "1 ч",
+            "title": "После удаления"
+          }
+        ],
+        "title": "",
+        "total": "1",
+        "viewport": 1200
+      }
+    }
+  ]
+}
