@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебные задачи на неделю</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #202e34;
+      background: #f2f5f3;
+      line-height: 1.5;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+    h1 { margin: 4px 0 10px; font-size: clamp(1.75rem, 5vw, 2.25rem); line-height: 1.2; }
+    h2 { margin: 0 0 18px; font-size: 1.2rem; }
+    p { margin: 0; }
+    header { margin-bottom: 24px; }
+    .eyebrow { color: #28644d; font-weight: 650; }
+    .muted { color: #53636a; }
+    .card { margin-top: 18px; padding: 24px; border: 1px solid #d7e1db; border-radius: 18px; background: #fff; }
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 20px; }
+    .stats dt { color: #53636a; }
+    .stats dd { margin: 3px 0 0; font-size: 1.8rem; font-weight: 700; }
+    .progress-heading { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+    progress { display: block; width: 100%; height: 12px; border: 0; border-radius: 999px; overflow: hidden; background: #e6ede8; accent-color: #28644d; }
+    progress::-webkit-progress-bar { background: #e6ede8; }
+    progress::-webkit-progress-value { background: #28644d; border-radius: 999px; }
+    progress::-moz-progress-bar { background: #28644d; border-radius: 999px; }
+    .hint { margin-top: 7px; color: #53636a; font-size: .875rem; }
+    button, input { font: inherit; }
+    button { min-height: 44px; padding: 9px 14px; border: 1px solid #bdcbc2; border-radius: 10px; color: inherit; background: #fff; cursor: pointer; }
+    button:hover { background: #f0f5f1; }
+    :focus-visible { outline: 3px solid #326cba; outline-offset: 3px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .filters button { flex: 1; min-width: 0; }
+    .filters button[aria-pressed="true"] { color: #fff; background: #28644d; border-color: #28644d; }
+    .task-list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+    .task { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid #dce4df; border-radius: 12px; }
+    .task-toggle { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 0; cursor: pointer; }
+    .task-toggle input { flex: 0 0 auto; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #28644d; }
+    .task-copy { min-width: 0; }
+    .task-title { display: block; font-weight: 600; overflow-wrap: anywhere; }
+    .task-meta { display: block; margin-top: 2px; font-size: .875rem; color: #53636a; }
+    .task.done .task-title { color: #53636a; text-decoration: line-through; }
+    .delete { flex: 0 0 auto; color: #a02b35; border-color: #e3c9cd; font-size: .875rem; padding: 8px 10px; }
+    .delete:hover { background: #fff1f2; }
+    .empty { padding: 18px 0; color: #53636a; overflow-wrap: anywhere; }
+    .form-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, .4fr); gap: 16px; }
+    .field { min-width: 0; }
+    .field label { display: block; margin-bottom: 6px; font-weight: 600; }
+    .field input { width: 100%; min-width: 0; min-height: 46px; padding: 10px 12px; border: 1px solid #9dadA3; border-radius: 10px; background: #fff; color: inherit; }
+    .field input[aria-invalid="true"] { border-color: #a02b35; }
+    .error { margin-top: 6px; color: #a02b35; font-size: .875rem; overflow-wrap: anywhere; }
+    .submit { margin-top: 18px; color: #fff; background: #28644d; border-color: #28644d; font-weight: 600; }
+    .submit:hover { background: #1d4d3a; }
+    .storage-note { margin-top: 18px; font-size: .875rem; color: #53636a; }
+    @media (max-width: 520px) {
+      main { padding: 24px 16px 36px; }
+      .card { padding: 20px; }
+      .form-grid { grid-template-columns: minmax(0, 1fr); }
+      .submit { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">План на неделю</p>
+      <h1>Учебные задачи</h1>
+      <p class="muted">Добавляйте задачи и отмечайте выполненное.</p>
+    </header>
+
+    <section class="card" aria-label="Общие показатели" aria-live="polite" aria-atomic="true">
+      <dl class="stats">
+        <div><dt>Всего</dt><dd id="total-hours">8 ч</dd></div>
+        <div><dt>Выполнено</dt><dd id="done-hours">2 ч</dd></div>
+      </dl>
+      <div class="progress-heading">
+        <label for="week-progress">Прогресс недели</label>
+        <strong id="progress-text">25%</strong>
+      </div>
+      <progress id="week-progress" max="100" value="25">25%</progress>
+      <p class="hint">Показатели учитывают все задачи при любом фильтре.</p>
+    </section>
+
+    <section class="card" aria-labelledby="tasks-heading">
+      <h2 id="tasks-heading">Задачи</h2>
+      <div class="filters" role="group" aria-label="Фильтр задач">
+        <button type="button" data-filter="all" aria-pressed="true">Все</button>
+        <button type="button" data-filter="active" aria-pressed="false">Активные</button>
+        <button type="button" data-filter="done" aria-pressed="false">Готовые</button>
+      </div>
+      <ul id="task-list" class="task-list" aria-label="Список задач"></ul>
+      <p id="empty-state" class="empty" hidden></p>
+    </section>
+
+    <section class="card" aria-labelledby="add-heading">
+      <h2 id="add-heading">Добавить задачу</h2>
+      <form id="task-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="task-title">Название</label>
+            <input id="task-title" name="title" type="text" required aria-describedby="title-error" aria-invalid="false" placeholder="Например, Конспект">
+            <p id="title-error" class="error" aria-live="polite" hidden></p>
+          </div>
+          <div class="field">
+            <label for="task-hours">Часы</label>
+            <input id="task-hours" name="hours" type="text" inputmode="decimal" required aria-describedby="hours-hint hours-error" aria-invalid="false" placeholder="1,5">
+            <p id="hours-hint" class="hint">От 0,5 до 24, шаг 0,5.</p>
+            <p id="hours-error" class="error" aria-live="polite" hidden></p>
+          </div>
+        </div>
+        <button class="submit" type="submit">Добавить задачу</button>
+      </form>
+    </section>
+
+    <p class="storage-note">Задачи хранятся до обновления или закрытия страницы.</p>
+    <noscript><p class="error">Для работы трекера включите JavaScript в браузере.</p></noscript>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      let tasks = [
+        { id: "task-1", title: "Чтение", hours: 2, done: true },
+        { id: "task-2", title: "Практика", hours: 4, done: false },
+        { id: "task-3", title: "Повторение", hours: 2, done: false }
+      ];
+      let nextTaskId = 4;
+      let currentFilter = "all";
+
+      const list = document.getElementById("task-list");
+      const emptyState = document.getElementById("empty-state");
+      const totalOutput = document.getElementById("total-hours");
+      const doneOutput = document.getElementById("done-hours");
+      const progressText = document.getElementById("progress-text");
+      const progressBar = document.getElementById("week-progress");
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const form = document.getElementById("task-form");
+      const titleInput = document.getElementById("task-title");
+      const hoursInput = document.getElementById("task-hours");
+      const titleError = document.getElementById("title-error");
+      const hoursError = document.getElementById("hours-error");
+      const formatHours = hours => String(hours).replace(".", ",");
+
+      function render() {
+        const total = tasks.reduce((sum, task) => sum + task.hours, 0);
+        const completed = tasks.reduce((sum, task) => sum + (task.done ? task.hours : 0), 0);
+        const progress = total > 0 ? Math.round(100 * completed / total) : 0;
+
+        totalOutput.textContent = `${formatHours(total)} ч`;
+        doneOutput.textContent = `${formatHours(completed)} ч`;
+        progressText.textContent = `${progress}%`;
+        progressBar.value = progress;
+        progressBar.textContent = `${progress}%`;
+
+        filterButtons.forEach(button => {
+          button.setAttribute("aria-pressed", String(button.dataset.filter === currentFilter));
+        });
+
+        const visibleTasks = tasks.filter(task => {
+          if (currentFilter === "active") return !task.done;
+          if (currentFilter === "done") return task.done;
+          return true;
+        });
+        const fragment = document.createDocumentFragment();
+
+        visibleTasks.forEach(task => {
+          const item = document.createElement("li");
+          item.className = task.done ? "task done" : "task";
+
+          const label = document.createElement("label");
+          label.className = "task-toggle";
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.checked = task.done;
+          checkbox.setAttribute("aria-label", `Готово: ${task.title}`);
+          checkbox.addEventListener("change", () => {
+            task.done = checkbox.checked;
+            render();
+          });
+
+          const copy = document.createElement("span");
+          copy.className = "task-copy";
+          const title = document.createElement("span");
+          title.className = "task-title";
+          title.textContent = task.title;
+          const meta = document.createElement("span");
+          meta.className = "task-meta";
+          meta.textContent = `${formatHours(task.hours)} ч · ${task.done ? "Готово" : "Активная"}`;
+          copy.append(title, meta);
+          label.append(checkbox, copy);
+
+          const deleteButton = document.createElement("button");
+          deleteButton.type = "button";
+          deleteButton.className = "delete";
+          deleteButton.textContent = "Удалить";
+          deleteButton.setAttribute("aria-label", `Удалить задачу «${task.title}»`);
+          deleteButton.addEventListener("click", () => {
+            tasks = tasks.filter(candidate => candidate.id !== task.id);
+            render();
+          });
+
+          item.append(label, deleteButton);
+          fragment.append(item);
+        });
+
+        list.replaceChildren(fragment);
+        emptyState.hidden = visibleTasks.length !== 0;
+        emptyState.textContent = tasks.length === 0
+          ? "Пока нет задач. Добавьте первую ниже."
+          : currentFilter === "active" ? "Нет активных задач." : "Нет готовых задач.";
+      }
+
+      function showError(input, output, message) {
+        input.setAttribute("aria-invalid", String(Boolean(message)));
+        output.textContent = message;
+        output.hidden = !message;
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          currentFilter = button.dataset.filter;
+          render();
+        });
+      });
+
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        const title = titleInput.value.trim();
+        const rawHours = hoursInput.value.trim();
+        const hours = rawHours === "" ? NaN : Number(rawHours.replace(",", "."));
+        const titleMessage = title ? "" : "Введите название задачи.";
+        let hoursMessage = "";
+
+        if (rawHours === "") {
+          hoursMessage = "Укажите количество часов.";
+        } else if (!Number.isFinite(hours)) {
+          hoursMessage = "Введите число, например 1,5.";
+        } else if (hours < 0.5 || hours > 24) {
+          hoursMessage = "Укажите от 0,5 до 24 часов.";
+        } else if (!Number.isInteger(hours * 2)) {
+          hoursMessage = "Используйте шаг 0,5 часа.";
+        }
+
+        showError(titleInput, titleError, titleMessage);
+        showError(hoursInput, hoursError, hoursMessage);
+        if (titleMessage || hoursMessage) {
+          (titleMessage ? titleInput : hoursInput).focus();
+          return;
+        }
+
+        tasks.push({ id: `task-${nextTaskId++}`, title, hours, done: false });
+        form.reset();
+        render();
+        titleInput.focus();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
